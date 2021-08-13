@@ -1,0 +1,16 @@
+body {
+    background-color: #0081a7;
+}
+.screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.randomizer-options {
+    background-color: #0081a7
+}
+.waves-effect.waves-light.btn {
+    background-color: #00AFB9;
+    margin: 10px;
+}

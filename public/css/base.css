@@ -1,0 +1,14 @@
+.screen {
+
+    width: 1366px;
+    height: 768px;
+    margin: auto;
+    position: relative;
+}
+
+.card .card-content {
+    padding: 5px;
+}
+.card {
+
+}

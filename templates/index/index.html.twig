@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+{% block head %}
+{% block title %}<title>Índice</title>{% endblock %}
+  {% block stylesheets %}
+      {{ parent() }}
+      <script type="text/javascript" src="{{ asset('js/addQ&A.js') }}"></script>
+      <!--CSS stylesheet-->
+      <link rel="stylesheet" type="text/css" href="{{ asset('css/index.css') }}">
+  {% endblock %}
+{% endblock %}
+{% block body %}
+<div class="screen">
+    <section class="randomizer-options card show">
+        <div class="card-content">
+            <a id="practice_questions_and_answers_button" class="waves-effect waves-light btn"><i class="material-icons left">play_circle_outline</i>Quiero practicar</a>
+            <a id="add_new_question_button" class="waves-effect waves-light btn"><i class="material-icons left">create</i>Quiero añadir preguntas</a>
+        </div>
+    </section>
+</div>
+
+{% endblock %}
