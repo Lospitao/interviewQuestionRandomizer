@@ -1,0 +1,75 @@
+body {
+    background-color: white;
+}
+.screen {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.textual-editor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+/**
+Category Editor Component
+*/
+.card.category {
+    width: 250px;
+    height: 150px;
+    border-radius: 10%;
+    background-color: #457b9d;
+}
+.card.category .card-content {
+    padding: 20px;
+    border:none;
+}
+.category textarea {
+    width: 210px;
+    height: 50px;
+    background-color: white;
+}
+/**
+Question Editor Component
+*/
+.card.question_editor {
+    width: 700px;
+    height: 300px;
+    border-radius: 5%;
+    background-color: #457b9d;
+    margin-right: 20px;
+}
+.card.question_editor .card-content {
+    padding: 20px;
+    border:none;
+}
+.question_editor textarea {
+    width: 660px;
+    height: 220px;
+    background-color: white;
+}
+/**
+Answear Editor Component
+*/
+.card.answear_editor {
+    width: 700px;
+    height: 300px;
+    border-radius: 5%;
+    background-color: #457b9d;
+    margin-left: 20px;
+}
+.card.answear_editor .card-content {
+    padding: 20px;
+    border:none;
+}
+.answear_editor textarea {
+    width: 660px;
+    height: 220px;
+    background-color: white;
+}

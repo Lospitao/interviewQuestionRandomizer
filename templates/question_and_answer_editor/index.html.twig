@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+{% block head %}
+
+    {% block title %}<title>Editor de la preguntas y respuestas</title>{% endblock %}
+    <meta charset="UTF-8">
+    {% block stylesheets %}
+        {{ parent() }}
+        <script type="text/javascript" src="{{ asset('js/addQ&A.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/editQ&A.js') }}"></script>
+        <!--CSS stylesheet-->
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/Q&Aeditor.css') }}">
+    {% endblock %}
+
+{% endblock %}
+
+{% block body %}
+
+    <div class="screen">
+        <!-- Category Editor -->
+        <section class="category card">
+            <div class="card-content">
+                <span class="card-title">Categoría</span>
+                <label for="category"></label>
+                <textarea id="category" type="text" class="validate" name="category" data-uuid={{ uuid }}></textarea>
+            </div>
+        </section>
+    <div class="textual-editor">
+    <!-- Questions Editor-->
+    <section class="question_editor card">
+        <div class="card-content">
+            <span class="card-title">Preguntas</span>
+            <label for="question"></label><textarea  id="question" name="question" placeholder="Edita tu pregunta" data-uuid={{ uuid }}></textarea>
+        </div>
+    </section>
+    <!-- Answers Editor -->
+    <section class="answear_editor card">
+        <div class="card-content">
+            <span class="card-title">Respuestas</span>
+            <label for="answear"></label><textarea id="answear" name="answear" placeholder="Edita tu respuesta" data-uuid={{ uuid }}></textarea>
+        </div>
+    </section>
+    </div>
+        <a id="add_new_question_button" class="waves-effect waves-light btn"><i class="material-icons left">create</i>Quiero añadir otra pregunta</a>
+    </div>
+{% endblock %}
