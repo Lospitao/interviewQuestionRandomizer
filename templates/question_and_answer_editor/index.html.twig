@@ -7,6 +7,7 @@
         {{ parent() }}
         <script type="text/javascript" src="{{ asset('js/addQ&A.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/editQ&A.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/randomizeQ&A.js') }}"></script>
         <!--CSS stylesheet-->
         <link rel="stylesheet" type="text/css" href="{{ asset('css/Q&Aeditor.css') }}">
     {% endblock %}
@@ -33,13 +34,16 @@
         </div>
     </section>
     <!-- Answers Editor -->
-    <section class="answear_editor card">
+    <section class="answer_editor card">
         <div class="card-content">
             <span class="card-title">Respuestas</span>
-            <label for="answear"></label><textarea id="answear" name="answear" placeholder="Edita tu respuesta" data-uuid={{ uuid }}></textarea>
+            <label for="answer"></label><textarea id="answer" name="answer" placeholder="Edita tu respuesta" data-uuid={{ uuid }}></textarea>
         </div>
     </section>
     </div>
+        <br>
         <a id="add_new_question_button" class="waves-effect waves-light btn"><i class="material-icons left">create</i>Quiero añadir otra pregunta</a>
+        <br><br>
+        <a id="practice_questions_and_answers_button" class="waves-effect waves-light btn"><i class="material-icons left">play_circle_outline</i>Quiero practicar</a>
     </div>
 {% endblock %}

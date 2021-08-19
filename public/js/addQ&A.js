@@ -28,7 +28,7 @@ function createNewQuestionAndAnswerEvent(createQuestionsAndAnswersWebService) {
 
 $(document).ready(function() {
 
-    let createQuestionsAndAnswersWebService = API_DOMAIN + '/v1/QuestionsAndAnswers/create';
+    let createQuestionsAndAnswersWebService = API_DOMAIN + '/v1/Questions/create';
     createNewQuestionAndAnswerEvent(createQuestionsAndAnswersWebService);
 
 });

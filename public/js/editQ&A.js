@@ -36,13 +36,13 @@ function editQuestion(question, uuid, editQuestionsAndAnswersWebService) {
         },
     })
 }
-function editAnswear(answear, uuid, editQuestionsAndAnswersWebService) {
+function editAnswer(answer, uuid, editQuestionsAndAnswersWebService) {
     $.ajax({
 
         url : editQuestionsAndAnswersWebService,
         data : {
             'uuid' : uuid,
-            'answear' : answear
+            'answer' : answer
         },
         type : 'PATCH',
         dataType : 'json',
@@ -51,7 +51,7 @@ function editAnswear(answear, uuid, editQuestionsAndAnswersWebService) {
         },
         error: function (data) {
             console.log('An error occurred.');
-            console.log(answear);
+            console.log(answer);
         },
     })
 }
@@ -69,10 +69,10 @@ function editQuestionEvent(uuid, editQuestionsAndAnswersWebService){
     });
 }
 function editAnswerEvent(uuid, editQuestionsAndAnswersWebService) {
-    $('#answear').on("blur", function () {
-        var answear = $('#answear').val();
-        console.log(answear);
-        editAnswear(answear, uuid, editQuestionsAndAnswersWebService);
+    $('#answer').on("blur", function () {
+        var answer = $('#answer').val();
+        console.log(answer);
+        editAnswer(answer, uuid, editQuestionsAndAnswersWebService);
     });
 }
 
@@ -80,7 +80,7 @@ function editAnswerEvent(uuid, editQuestionsAndAnswersWebService) {
 $(document).ready(function() {
     var question = document.getElementById("question");
     var uuid = question.getAttribute("data-uuid");
-    var editQuestionsAndAnswersWebService = API_DOMAIN + '/v1/QuestionsAndAnswers/'+ uuid;
+    var editQuestionsAndAnswersWebService = API_DOMAIN + '/v1/Questions/'+ uuid + '/edit';
     editCategoryEvent(uuid, editQuestionsAndAnswersWebService);
     editQuestionEvent(uuid, editQuestionsAndAnswersWebService);
     editAnswerEvent(uuid, editQuestionsAndAnswersWebService);

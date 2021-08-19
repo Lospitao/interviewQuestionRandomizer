@@ -55,20 +55,20 @@ Question Editor Component
     background-color: white;
 }
 /**
-Answear Editor Component
+Answer Editor Component
 */
-.card.answear_editor {
+.card.answer_editor {
     width: 700px;
     height: 300px;
     border-radius: 5%;
     background-color: #457b9d;
     margin-left: 20px;
 }
-.card.answear_editor .card-content {
+.card.answer_editor .card-content {
     padding: 20px;
     border:none;
 }
-.answear_editor textarea {
+.answer_editor textarea {
     width: 660px;
     height: 220px;
     background-color: white;
