@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+{% block head %}
+    {% block title %}<title>Índice</title>{% endblock %}
+    {% block stylesheets %}
+        {{ parent() }}
+        <script type="text/javascript" src="{{ asset('js/randomizeQ&A.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/addQ&A.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/timeUserAnswer.js') }}"></script>
+
+
+        <!--CSS stylesheet-->
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/playground.css') }}">
+    {% endblock %}
+{% endblock %}
+{% block body %}
+    <div class="screen">
+        <section class="crud-options card">
+            <div class="crud-options" data-uuid= {{ uuid }}>
+                <a href="{{ path('question_and_answer_editor', {'uuid': uuid }) }}" class="waves-effect waves-light btn"><i class="material-icons right">create</i>Editar pregunta</a>
+                <a class="waves-effect waves-light btn"><i class="material-icons right">delete</i>Borrar pregunta</a>
+                <a id="add_new_question_button" class="waves-effect waves-light btn"><i class="material-icons right">add_circle</i>Crear otra pregunta</a>
+            </div>
+        </section>
+        <section class="randomizer-options card show">
+            <p class="instructions">Teclea tu respuesta en la casilla en blanco. Tras 60 segundos, ésta desactivará
+                y podrás pasar el ratón por encima de la tarjeta para ver la respuesta y compararla con la tuya.</p>
+            <div id="flipping-card" class="flip-card" data-uuid= {{ uuid }}>
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h4>{{ category }}</h4>
+                        <h5>{{ question }}</h5>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>{{ answer }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="user-answer">
+                <label>
+                    <textarea id="user-answer-textarea" name="user-answer" cols="30" rows="10"></textarea>
+                </label>
+            </div>
+        </section>
+        <section class="next-question card">
+            <div class="next-question" data-uuid= {{ uuid }}>
+                <a id="practice_questions_and_answers_button" class="waves-effect waves-light btn"><i class="material-icons left">play_arrow</i>Siguiente</a>
+            </div>
+        </section>
+    </div>
+
+{% endblock %}
